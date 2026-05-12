@@ -4,7 +4,7 @@ const [first, second] = colors;
 console.log(first);
 console.log(second);
 
-
+ 
 // You can even skip some items or use rest
 
 const  [first1 , , third] = colors;
