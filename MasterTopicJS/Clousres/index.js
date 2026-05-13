@@ -42,14 +42,33 @@
 
 
 // a makeAdder function:
-function makeAdder(x) {
-    return function(y) {
-        return x + y;
+// function makeAdder(x) {
+//     return function(y) {
+//         return x + y;
+//     }
+// }
+
+// let val1 = makeAdder(10);
+// let val2 = makeAdder(4);
+
+// console.log(val1(3));
+// console.log(val2(3));
+
+
+function gp() {
+    function x() {
+        const a = 5;
+        const b = 8;
+        function child() {
+            console.log(a,b);
+        }
+        return child;
     }
+
+    const y = x(1);
+    const y2 = x(2);
+
+    console.dir(y)
+    console.dir(y2)
 }
-
-let val1 = makeAdder(10);
-let val2 = makeAdder(4);
-
-console.log(val1(3));
-console.log(val2(3));
+gp();
