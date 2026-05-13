@@ -27,15 +27,29 @@
 
 // CLOUSRE
 
-function makeFun() {
-    const name = "sukhu";
-    console.log("ravi")
-    function displayName() {
-        console.log(name);
-    }
+// function makeFun() {
+//     const name = "sukhu";
+//     console.log("ravi")
+//     function displayName() {
+//         console.log(name);
+//     }
 
-    return displayName;
+//     return displayName;
+// }
+
+// let mf = makeFun();
+// mf();
+
+
+// a makeAdder function:
+function makeAdder(x) {
+    return function(y) {
+        return x + y;
+    }
 }
 
-let mf = makeFun();
-mf();
+let val1 = makeAdder(10);
+let val2 = makeAdder(4);
+
+console.log(val1(3));
+console.log(val2(3));
