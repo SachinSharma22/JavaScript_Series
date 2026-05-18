@@ -30,3 +30,20 @@ ans.then(() => {
 .catch(() => {
     console.log("Resolve nhu hua tha")
 })
+
+let num = new Promise((res,rej) => {
+    let data = Math.floor(Math.random() * 10);
+    if(data > 5) {
+        return res()
+    }else {
+        return rej()
+    }
+})
+
+num
+.then(() => {
+    console.log("Data is Resolved")
+})
+.catch(() => {
+    console.log("Data is Rejected")
+})
