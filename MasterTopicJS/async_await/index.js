@@ -42,8 +42,8 @@ let num = new Promise((res,rej) => {
 
 num
 .then(() => {
-    console.log("Data is Resolved")
+    console.log("Data is Resolved.")
 })
 .catch(() => {
-    console.log("Data is Rejected")
+    console.log("Data is Rejected.")
 })
